@@ -6,9 +6,9 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	public int money = 25;
-	public int bombom = 10;
-	public int bala = 20;
-	public int doce = 2;
+	public int bombom = 12;
+	public int bala = 28;
+	public int cupck = 10;
 
 	public Text playerText;
 
@@ -25,5 +25,9 @@ public class PlayerScript : MonoBehaviour {
 		setPlayerText();
 		if(money == 0)
 			Application.LoadLevel("Entrega");
+
+		PlayerPrefs.SetInt("bombom", bombom);
+		PlayerPrefs.SetInt("bala", bala);
+		PlayerPrefs.SetInt("cupck", cupck);
 	}
 }

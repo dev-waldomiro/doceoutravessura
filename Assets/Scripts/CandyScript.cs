@@ -6,7 +6,7 @@ public class CandyScript : MonoBehaviour {
 
 	public int cost;
 	public bool bombom = false;
-	public bool doce = false;
+	public bool cupck = false;
 	public bool bala = false;
 	public PlayerScript inventory;
 
@@ -14,8 +14,8 @@ public class CandyScript : MonoBehaviour {
 		if(cost <= inventory.money)
 			inventory.money -= cost;
 
-		if(doce && cost <= inventory.money)
-			inventory.doce += 1;
+		if(cupck && cost <= inventory.money)
+			inventory.cupck += 1;
 		else if (bombom && cost <= inventory.money)
 			inventory.bombom += 3;
 		else if (bala && cost <= inventory.money)
