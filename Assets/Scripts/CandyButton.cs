@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class CandyButton : MonoBehaviour {
@@ -16,6 +17,8 @@ public class CandyButton : MonoBehaviour {
 	public bool bala;
 	public bool cupck;
 
+	public Text allTex;
+
 	public void Choose(){
 		add=GameObject.FindWithTag("button").GetComponent<KidsScript>();
 		add1=GameObject.FindWithTag("button1").GetComponent<KidsScript>();
@@ -25,6 +28,11 @@ public class CandyButton : MonoBehaviour {
 		add1=GameObject.FindWithTag("button2").GetComponent<KidsScript>();
 		}
 		if(add1.qntAtual < add1.qntNec && add.qntAtual >= add.qntNec) add=GameObject.FindWithTag("button2").GetComponent<KidsScript>();
+	}
+	
+	void SetPlayerText(){
+		allTex.text = qnt.ToString() + "x";
+
 	}
 
 	public void addValor(){
@@ -42,10 +50,12 @@ public class CandyButton : MonoBehaviour {
 		if(bala) qnt = PlayerPrefs.GetInt("bala");
 		if(cupck) qnt = PlayerPrefs.GetInt("cupck");
 		Choose();
+		SetPlayerText();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		Choose();
+		SetPlayerText();
 	}
 }
