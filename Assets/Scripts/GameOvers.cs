@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOvers : MonoBehaviour {
 
@@ -21,19 +22,19 @@ public class GameOvers : MonoBehaviour {
 	void Update () {
 		if(qnt1.qnt == 0 && qnt2.qnt == 0 && qnt3.qnt == 0 && rounds.rounds < 5){
 			PlayerPrefs.SetInt("final", 1);
-			//SceneManager.LoadScene();
+			SceneManager.LoadScene(3);
 		}
 		if(qnt1.qnt == 0 && qnt2.qnt == 0 && qnt3.qnt == 0 && rounds.rounds >= 5 && rounds.rounds < 8){
 			PlayerPrefs.SetInt("final", 2);
-			//SceneManager.LoadScene();
+			SceneManager.LoadScene(3);
 		}
 		if(qnt1.qnt == 0 && qnt2.qnt == 0 && qnt3.qnt == 0 && rounds.rounds >= 8 && rounds.rounds < 12){
 			PlayerPrefs.SetInt("final", 3);
-			//SceneManager.LoadScene();
+			SceneManager.LoadScene(3);
 		}
 		if(qnt1.qnt == 0 && qnt2.qnt == 0 && qnt3.qnt == 0 && rounds.rounds >= 12){
 			PlayerPrefs.SetInt("final", 4);
-			//SceneManager.LoadScene();
+			SceneManager.LoadScene(3);
 		}
 
 	}

@@ -14,7 +14,7 @@ public class AUDIOLAST : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//audio = PlayerPrefs.GetInt("final");
+		audio = PlayerPrefs.GetInt("final");
 		asour = GetComponent<AudioSource>();
 	}
 	
