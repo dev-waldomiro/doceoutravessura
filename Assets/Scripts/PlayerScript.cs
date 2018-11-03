@@ -6,14 +6,14 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	public int money = 25;
-	public int bombom = 12;
-	public int bala = 28;
-	public int cupck = 10;
+	public int bombom = 0;
+	public int bala = 0;
+	public int cupck = 0;
 
 	public Text playerText;
 
 	void setPlayerText(){
-		playerText.text = "Dinheiros: " + money.ToString() + " Balas: " + bala.ToString();
+		playerText.text = "Dinheiros: " + money.ToString() + " \nBalas: " + bala.ToString() + " \nBombons: " + bombom.ToString() + " \nCupcakes: " + cupck.ToString() ;
 	}
 	
 	void Start () {
